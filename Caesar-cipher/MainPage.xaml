@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Caesar_cipher.MainPage">
+
+    <VerticalStackLayout
+        Padding="10"
+        Margin="10"
+        BackgroundColor="LightBlue">
+        <Label
+            Margin="10"
+            Text="Caesar cipher"
+            HorizontalTextAlignment="Center">
+        </Label>
+        <HorizontalStackLayout
+            HorizontalOptions="Center">
+            <Editor
+                x:Name="InPutText"
+                BackgroundColor="White"
+                WidthRequest="400"
+                Margin="10"
+                Placeholder="abc"
+                TextTransform="Lowercase"
+                TextColor="Black">
+            </Editor>
+            <VerticalStackLayout>
+                <Entry
+                    x:Name="InPutKey"
+                    BackgroundColor="White"
+                    Margin="10"
+                    Placeholder="Key"
+                    ></Entry>
+                <Button
+                    Text="Encrypt"
+                    BackgroundColor="White"
+                    TextColor="red"
+                    Clicked="Szyfruj"></Button>
+            </VerticalStackLayout>
+            <Border HeightRequest="500" WidthRequest="400"
+                Margin="10">
+                <Label
+                    x:Name="OutPut"
+                    Background="DarkBlue"
+                   TextColor="red"
+                Text="Result">
+                </Label>
+            </Border>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+
+</ContentPage>
